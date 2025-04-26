@@ -1,166 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>AndryLondon NFT Gallery</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #f5f5f5;
-      color: #333;
-    }
-    header {
-      background: #222;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    section {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: auto;
-    }
-    img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    }
-    .button {
-      display: inline-block;
-      background: #00aaff;
-      color: white;
-      padding: 12px 24px;
-      margin-top: 20px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 18px;
-      transition: background 0.3s;
-    }
-    .button:hover {
-      background: #0077cc;
-    }
-    input {
-      padding: 10px;
-      font-size: 18px;
-      width: 80%;
-      margin-top: 20px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-    }
-    .center {
-      text-align: center;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея Художника</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            text-align: center;
+            padding: 50px;
+            background-color: #f1f1f1;
+        }
+        .header h1 {
+            font-size: 40px;
+            color: #333;
+        }
+        .header p {
+            font-size: 20px;
+            color: #777;
+        }
+        .gallery-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .gallery-btn:hover {
+            background-color: #555;
+        }
+        .artist-image {
+            width: 80%;
+            margin-top: 20px;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-  <h1>AndryLondon NFT Art Gallery</h1>
-</header>
-
-<section>
-  <h2>About the Artist</h2>
-  <p>
-    AndryLondon, born amidst the vibrant colors of the Mediterranean coast, discovered his passion for art at a very young age. From sketching endless ocean waves to capturing the golden hues of the sunset, his heart was always intertwined with nature. Overcoming personal hardships and life's unexpected turns, he found a refuge in painting. His journey took him across continents, where he absorbed diverse cultures and philosophies, deeply influencing his artistic expressions. Today, AndryLondon is celebrated for blending surrealism with modern digital art, breathing soul into each canvas he touches. His works are a reflection of freedom, dreams, and the eternal human spirit seeking beauty in a chaotic world.
-  </p>
-</section>
-
-<section class="center">
-  <h2>Choose Your Art</h2>
-  <a href="#palm"><img src="https://imgur.com/YH5GXFV.png" alt="Palm Tree"></a><br>
-  <a href="#surf"><img src="https://imgur.com/oYjRkrg.png" alt="Surf"></a><br>
-  <a href="#head"><img src="https://imgur.com/hmtAqPL.png" alt="Head"></a>
-</section>
-
-<section id="palm">
-  <h2>🌴 Palm of Dreams</h2>
-  <img src="https://imgur.com/YH5GXFV.png" alt="Palm">
-  <p>
-    "Palm of Dreams" was inspired during a sunset walk along an endless beach. Andry envisioned the palm as a symbol of resilience and timeless hope. The smooth strokes mimic the gentle whispers of the ocean breeze, reminding viewers of endless possibilities. The artist wished to immortalize a moment where time stood still, and dreams felt tangible, fluttering in the salty air.
-  </p>
-  <div class="center">
-    <a href="#buy-palm" class="button">Buy</a>
-  </div>
-</section>
-
-<section id="surf">
-  <h2>🏄‍♂️ Ride the Infinite</h2>
-  <img src="https://imgur.com/oYjRkrg.png" alt="Surf">
-  <p>
-    "Ride the Infinite" captures the raw thrill of embracing life’s waves. Inspired by a surfer who fearlessly rode the massive ocean tides at sunrise, Andry channeled that spirit into bold, flowing lines and a surge of colors. The painting urges one to leap, trust, and ride their destiny without hesitation.
-  </p>
-  <div class="center">
-    <a href="#buy-surf" class="button">Buy</a>
-  </div>
-</section>
-
-<section id="head">
-  <h2>🧠 Mind Unchained</h2>
-  <img src="https://imgur.com/hmtAqPL.png" alt="Head">
-  <p>
-    "Mind Unchained" dives deep into the liberation of thought and consciousness. Born from a night of contemplation under a starry sky, this piece blends chaotic brushstrokes with strategic patterns. Andry wanted to show that true freedom lies not outside, but within our own minds.
-  </p>
-  <div class="center">
-    <a href="#buy-head" class="button">Buy</a>
-  </div>
-</section>
-
-<section id="buy-palm" class="center">
-  <h2>Purchase: 🌴 Palm of Dreams</h2>
-  <img src="https://imgur.com/YH5GXFV.png" alt="Palm">
-  <p>Price: <strong>$65,000</strong></p>
-  <input type="text" id="username" placeholder="Enter your name">
-  <br>
-  <button class="button" onclick="sendMessageToTelegram()">Submit</button>
-</section>
-
-<section id="buy-surf" class="center">
-  <h2>Purchase: 🏄‍♂️ Ride the Infinite</h2>
-  <img src="https://imgur.com/oYjRkrg.png" alt="Surf">
-  <p>Price: <strong>$65,000</strong></p>
-  <input type="text" id="username" placeholder="Enter your name">
-  <br>
-  <button class="button" onclick="sendMessageToTelegram()">Submit</button>
-</section>
-
-<section id="buy-head" class="center">
-  <h2>Purchase: 🧠 Mind Unchained</h2>
-  <img src="https://imgur.com/hmtAqPL.png" alt="Head">
-  <p>Price: <strong>$65,000</strong></p>
-  <input type="text" id="username" placeholder="Enter your name">
-  <br>
-  <button class="button" onclick="sendMessageToTelegram()">Submit</button>
-</section>
-
-<script>
-function sendMessageToTelegram() {
-    const nameInput = document.getElementById("username");
-    const name = nameInput.value.trim();
-
-    if (name === "") {
-        alert("❗ Please enter your name!");
-        return;
-    }
-
-    const token = "7679289773:AAELewdGiJT_pRAimlMhyjVTXeT_qceZIm4";
-    const chat_id = "YOUR_CHAT_ID"; // 💬 Тебе нужно сюда подставить свой Telegram ID (не имя!)
-    const text = `🖼 New purchase request!\nName: ${name}`;
-
-    const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${encodeURIComponent(text)}`;
-
-    fetch(url)
-    .then(response => {
-        if (response.ok) {
-            alert(`✅ Thank you, ${name}! Your request has been sent.`);
-        } else {
-            alert("❌ Error sending your request. Try again later.");
-        }
-    });
-}
-</script>
+    <div class="header">
+        <h1>Художник [Имя]</h1>
+        <p>Изучите уникальные произведения искусства и выберите свою картину для покупки.</p>
+        <img src="https://i.pinimg.com/originals/46/cd/71/46cd7135bfa11d9da8a252fd09899af8.png" alt="Картина" class="artist-image">
+        <br>
+        <a href="gallery.html"><button class="gallery-btn">Перейти в галерею</button></a>
+    </div>
 
 </body>
 </html>
