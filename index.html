@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Галерея Художника</title>
+    <title>Artist Gallery - Andrew London</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,45 +11,85 @@
             margin: 0;
             padding: 0;
         }
-        .header {
-            text-align: center;
-            padding: 50px;
-            background-color: #f1f1f1;
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+            gap: 30px;
         }
-        .header h1 {
-            font-size: 40px;
+        .gallery-item {
+            width: 30%;
+            text-align: center;
+            margin-bottom: 30px;
+            cursor: pointer;
+            border: 2px solid #333;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .gallery-item h2 {
+            font-size: 22px;
             color: #333;
         }
-        .header p {
-            font-size: 20px;
-            color: #777;
-        }
-        .gallery-btn {
-            margin-top: 20px;
-            padding: 10px 20px;
+        .gallery-item p {
             font-size: 18px;
+            color: #555;
+        }
+        .consultation-form {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .consultation-form input, .consultation-form select {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+            max-width: 400px;
+        }
+        .consultation-form button {
+            padding: 10px 20px;
             background-color: #333;
             color: white;
             border: none;
             cursor: pointer;
         }
-        .gallery-btn:hover {
+        .consultation-form button:hover {
             background-color: #555;
-        }
-        .artist-image {
-            width: 80%;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>Художник [Имя]</h1>
-        <p>Изучите уникальные произведения искусства и выберите свою картину для покупки.</p>
-        <img src="https://i.pinimg.com/originals/46/cd/71/46cd7135bfa11d9da8a252fd09899af8.png" alt="Картина" class="artist-image">
-        <br>
-        <a href="gallery.html"><button class="gallery-btn">Перейти в галерею</button></a>
+    <div class="gallery-container">
+        <div class="gallery-item">
+            <img src="https://imgur.com/YH5GXFV.jpg" alt="Palm">
+            <h2>Palms</h2>
+            <p>Price: 5000 ₽</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://imgur.com/oYjRkrg.jpg" alt="Surf">
+            <h2>Surf</h2>
+            <p>Price: 8000 ₽</p>
+        </div>
+        <div class="gallery-item">
+            <img src="https://imgur.com/hmtAqPL.jpg" alt="Head">
+            <h2>Head</h2>
+            <p>Price: 10000 ₽</p>
+        </div>
+    </div>
+
+    <div class="consultation-form">
+        <h2>Get Consultation</h2>
+        <form action="https://art-bot-phks.onrender.com/submit" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="tel" name="phone" placeholder="Your Phone" required>
+            <input type="text" name="artwork" placeholder="Interested Artwork" required>
+            <button type="submit">Submit</button>
+        </form>
     </div>
 
 </body>
