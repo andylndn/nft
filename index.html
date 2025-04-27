@@ -3,52 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artist Gallery - Andrew London</title>
+    <title>Andrew London Art Gallery</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #fff;
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
         }
         .gallery-container {
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             flex-wrap: wrap;
-            margin-top: 50px;
-            gap: 30px;
+            margin-top: 20px;
+            padding: 20px;
         }
         .gallery-item {
             width: 30%;
-            text-align: center;
             margin-bottom: 30px;
-            cursor: pointer;
-            border: 2px solid #333;
-            border-radius: 8px;
-            padding: 10px;
+            text-align: center;
         }
         .gallery-item img {
             width: 100%;
-            height: auto;
             border-radius: 8px;
         }
         .gallery-item h2 {
             font-size: 22px;
             color: #333;
+            margin-top: 10px;
         }
         .gallery-item p {
             font-size: 18px;
             color: #555;
+            margin: 10px 0;
         }
         .consultation-form {
-            margin-top: 30px;
+            margin-top: 50px;
             text-align: center;
+            padding: 20px;
         }
-        .consultation-form input, .consultation-form select {
+        .consultation-form input {
             padding: 10px;
             margin: 10px;
             width: 80%;
             max-width: 400px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
         .consultation-form button {
             padding: 10px 20px;
@@ -56,39 +56,52 @@
             color: white;
             border: none;
             cursor: pointer;
+            border-radius: 5px;
         }
         .consultation-form button:hover {
             background-color: #555;
+        }
+        .description {
+            padding: 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #333;
         }
     </style>
 </head>
 <body>
 
+    <div class="description">
+        <h1>Andrew London Art Gallery</h1>
+        <p>Andrew London is a visionary contemporary artist known for blending natural forms with dynamic human expressions. His works are celebrated worldwide for their powerful emotions and minimalistic elegance. Each piece tells a story, inviting the viewer to journey through landscapes of thought, spirit, and dreams.</p>
+    </div>
+
     <div class="gallery-container">
         <div class="gallery-item">
-            <img src="https://imgur.com/YH5GXFV.jpg" alt="Palm">
-            <h2>Palms</h2>
-            <p>Price: 5000 ₽</p>
+            <img src="https://imgur.com/YH5GXFV.jpg" alt="Palm Artwork">
+            <h2>Palm Breeze</h2>
+            <p>A mesmerizing painting capturing the calm spirit of tropical shores, where every leaf whispers ancient secrets of freedom.</p>
         </div>
         <div class="gallery-item">
-            <img src="https://imgur.com/oYjRkrg.jpg" alt="Surf">
-            <h2>Surf</h2>
-            <p>Price: 8000 ₽</p>
+            <img src="https://imgur.com/oYjRkrg.jpg" alt="Surf Artwork">
+            <h2>Endless Wave</h2>
+            <p>A thrilling ode to the endless ocean waves, embodying the courage and balance needed to ride the flow of life itself.</p>
         </div>
         <div class="gallery-item">
-            <img src="https://imgur.com/hmtAqPL.jpg" alt="Head">
-            <h2>Head</h2>
-            <p>Price: 10000 ₽</p>
+            <img src="https://imgur.com/hmtAqPL.jpg" alt="Head Sculpture">
+            <h2>Silent Echo</h2>
+            <p>An introspective piece reflecting the quiet resonance of thoughts and memories, frozen in a timeless form.</p>
         </div>
     </div>
 
     <div class="consultation-form">
-        <h2>Get Consultation</h2>
+        <h2>Request a Consultation</h2>
         <form action="https://art-bot-phks.onrender.com/submit" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="tel" name="phone" placeholder="Your Phone" required>
             <input type="text" name="artwork" placeholder="Interested Artwork" required>
-            <button type="submit">Submit</button>
+            <button type="submit">Send Request</button>
         </form>
     </div>
 
