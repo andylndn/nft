@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrew London Art Gallery</title>
-
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #fff;
+            background-color: #ffffff;
             margin: 0;
             padding: 0;
         }
@@ -21,8 +20,8 @@
         }
         .gallery-item {
             width: 30%;
-            text-align: center;
             margin-bottom: 30px;
+            text-align: center;
         }
         .gallery-item img {
             width: 100%;
@@ -36,10 +35,12 @@
         .gallery-item p {
             font-size: 18px;
             color: #555;
+            margin: 10px 0;
         }
         .consultation-form {
-            margin: 50px 20px;
+            margin-top: 50px;
             text-align: center;
+            padding: 20px;
         }
         .consultation-form input {
             padding: 10px;
@@ -54,95 +55,55 @@
             background-color: #333;
             color: white;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            border-radius: 5px;
         }
         .consultation-form button:hover {
             background-color: #555;
         }
-        #thank-you {
-            display: none;
+        .description {
+            padding: 20px;
             text-align: center;
-            margin-top: 30px;
-        }
-
-        /* Адаптивность */
-        @media (max-width: 768px) {
-            .gallery-container {
-                flex-direction: column;
-                align-items: center;
-            }
-            .gallery-item {
-                width: 90%;
-            }
+            max-width: 800px;
+            margin: 0 auto;
+            color: #333;
         }
     </style>
-
-    <!-- Google Analytics -->
-    <!-- Вставь сюда свой ID отслеживания в 'G-XXXXXXXXXX' -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
 </head>
-
 <body>
 
-    <!-- Галерея -->
+    <div class="description">
+        <h1>Andrew London Art Gallery</h1>
+        <p>Andrew London is a visionary contemporary artist known for blending natural forms with dynamic human expressions. His works are celebrated worldwide for their powerful emotions and minimalistic elegance. Each piece tells a story, inviting the viewer to journey through landscapes of thought, spirit, and dreams.</p>
+    </div>
+
     <div class="gallery-container">
         <div class="gallery-item">
-            <img src="https://i.imgur.com/YH5GXFV.jpg" alt="Palm Tree">
-            <h2>Palm Tree</h2>
-            <p>A stunning view of a solitary palm, capturing the spirit of distant shores and eternal summer.</p>
+            <img src="https://imgur.com/YH5GXFV.jpg" alt="Palm Artwork 65 000 USD">
+            <h2>Palm Breeze</h2>
+            <p>A mesmerizing painting capturing the calm spirit of tropical shores, where every leaf whispers ancient secrets of freedom.</p>
         </div>
         <div class="gallery-item">
-            <img src="https://i.imgur.com/oYjRkrg.jpg" alt="Surfboard">
-            <h2>Surfboard</h2>
-            <p>The raw beauty of the ocean immortalized in the sleek silhouette of a board awaiting the next wave.</p>
+            <img src="https://imgur.com/oYjRkrg.jpg" alt="Surf Artwork 65 000 USD">
+            <h2>Endless Wave</h2>
+            <p>A thrilling ode to the endless ocean waves, embodying the courage and balance needed to ride the flow of life itself.</p>
         </div>
         <div class="gallery-item">
-            <img src="https://i.imgur.com/hmtAqPL.jpg" alt="Head Sculpture">
-            <h2>Head Sculpture</h2>
-            <p>A bold interpretation of human thought and spirit, frozen in time through textured forms.</p>
+            <img src="https://imgur.com/hmtAqPL.jpg" alt="Head Sculpture 65 000 USD">
+            <h2>Silent Echo</h2>
+            <p>An introspective piece reflecting the quiet resonance of thoughts and memories, frozen in a timeless form.</p>
         </div>
     </div>
 
-    <!-- Форма заявки -->
     <div class="consultation-form">
         <h2>Request a Consultation</h2>
-        <form id="contact-form">
+        <form action="https://art-bot-phks.onrender.com/submit" method="POST">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="tel" name="phone" placeholder="Your Phone" required>
-            <input type="text" name="artwork" placeholder="Artwork Interested In" required>
-            <button type="submit">Send</button>
+            <input type="text" name="artwork" placeholder="Interested Artwork" required>
+            <button type="submit">Send Request</button>
         </form>
-
-        <div id="thank-you">
-            <h2>Thank you for your request!</h2>
-            <p>We will contact you shortly.</p>
-        </div>
     </div>
-
-    <script>
-    document.getElementById('contact-form').addEventListener('submit', async function(event) {
-        event.preventDefault(); // Отменяем стандартную отправку
-        const form = event.target;
-        const formData = new FormData(form);
-
-        await fetch('https://art-bot-phks.onrender.com', {  // твой Python сервер
-            method: 'POST',
-            body: formData
-        });
-
-        form.style.display = 'none';
-        document.getElementById('thank-you').style.display = 'block';
-    });
-    </script>
 
 </body>
 </html>
